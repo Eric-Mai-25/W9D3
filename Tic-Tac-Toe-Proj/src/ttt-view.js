@@ -3,6 +3,7 @@ class View {
   }
   
   setupBoard() {
+    
   }
   
   handleClick(e) {
