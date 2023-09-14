@@ -9,8 +9,7 @@ const dogs =
   "French Bulldog": "https://www.akc.org/dog-breeds/french-bulldog/" 
 };
 const dropDownDog = document.getElementsByClassName("drop-down-dog-list")
-const nav = document.getElementsByClassName("drop-down-dog-nav")
-let dogLinks = document.getElementsByClassName('dog-link')
+const dogsTitle = document.getElementsByClassName("title")
 
 export function dogLinkCreator(dogs){
   let dog_links = []
@@ -33,14 +32,17 @@ export const attachDogLinks = (dogs, htmlElement)=>{
   })
 }
 const handleEnter = (e)=>{
-  e.target.classList.remove("dog-link")
+  dropDownDog[0].style.display = "block"
 }
 
 const handleLeave = (e)=>{
- console.log('out')
+ dropDownDog[0].style.display = "none"
+
 }
 
 attachDogLinks(dogs, dropDownDog)
 
-nav[0].addEventListener("mouseover", handleEnter)
-nav[0].addEventListener("mouseout", handleLeave)
+dogsTitle[0].addEventListener("mouseover", handleEnter)
+dropDownDog[0].addEventListener("mouseover",handleEnter)
+dropDownDog[0].addEventListener("mouseout", handleLeave)
+dogsTitle[0].addEventListener("mouseout", handleLeave)

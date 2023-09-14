@@ -53,6 +53,14 @@ h1 {
 }
 
 
-li.dog-link {
-  display: none
+
+
+ul.drop-down-dog-list {
+  display: none;
+}
+
+li.dog-link{
+
+  background-color: grey;
+
 }
